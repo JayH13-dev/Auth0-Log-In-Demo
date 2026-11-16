@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auth0 Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Auth0 Demo</h1>
+
+    <p id="status">Loading…</p>
+
+    <section id="profile" hidden>
+      <img id="avatar" alt="" />
+      <div>
+        <strong id="name"></strong>
+        <div id="email" class="muted"></div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="btn-login" hidden>Log in</button>
+      <button id="btn-logout" hidden>Log out</button>
+    </div>
+
+    <details id="claims-wrap" hidden>
+      <summary>Raw user profile</summary>
+      <pre id="claims"></pre>
+    </details>
+
+    <p id="error" class="error" hidden></p>
+  </main>
+
+  <!-- Auth0 SPA SDK (exposes window.auth0) -->
+  <script src="https://cdn.jsdelivr.net/npm/@auth0/auth0-spa-js@2.1.3/dist/auth0-spa-js.production.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
